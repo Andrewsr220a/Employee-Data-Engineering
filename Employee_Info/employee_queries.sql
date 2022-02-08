@@ -13,10 +13,10 @@ FROM employees
 WHERE hire_date LIKE '%1986';
 
 
-SELECT dept_managers.dept_no, departments.dept_name, dept_managers.emp_no, employees.last_name, employees.first_name
-FROM dept_managers
-JOIN departments ON dept_managers.dept_no = departments.dept_no
-JOIN employees ON dept_managers.emp_no = employees.emp_no;
+SELECT dept_manager.dept_no, departments.dept_name, dept_manager.emp_no, employees.last_name, employees.first_name
+FROM dept_manager
+JOIN departments ON dept_manager.dept_no = departments.dept_no
+JOIN employees ON dept_manager.emp_no = employees.emp_no;
 
 
 SELECT employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
